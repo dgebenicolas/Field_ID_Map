@@ -39,9 +39,9 @@ def display_choropleth_map(results_df, config):
             geojson=geojson_data,
             locations='Field_ID',
             featureidkey="properties.Field_ID",
-            mapbox_style="carto-positron",
+            mapbox_style="open-street-map",
             zoom=8,
-            center={'lat': 51.1801, 'lon': 71.4383},
+            center={"lat": 53.95, "lon": 63.48},
             opacity=0.7,
             hover_data=['Field_ID']
         )
@@ -67,7 +67,7 @@ def main():
 
         display_choropleth_map(df, {
             'field_id_col': 'Field_ID',
-            'map_center': {'lat': 51.1801, 'lon': 71.4383}
+            'map_center': {"lat": 53.95, "lon": 63.48}
         })
 
 if __name__ == "__main__":
